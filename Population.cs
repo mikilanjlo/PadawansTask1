@@ -6,6 +6,10 @@ namespace PadawansTask1
     {
         public static int GetYears(int initialPopulation, double percent, int visitors, int currentPopulation)
         {
+            if (initialPopulation <= 0)
+                throw new Exception("Initial Population Cannot Be Less Or Equals Zero");
+            if (currentPopulation <= 0)
+                throw new Exception("current Population Cannot Be Less Or Equals Zero");
             int years = 0;
             percent = percent / 100;
             while (initialPopulation < currentPopulation)
